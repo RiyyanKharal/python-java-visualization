@@ -1,0 +1,35 @@
+import seaborn as sns
+data = sns.load_dataset("tips")
+
+sns.histplot(data["total_bill"])
+sns.boxplot(x="day", y="total_bill", data=data)
+sns.scatterplot(x="total_bill", y="tip", data=data, hue="day")
+
+
+
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+z = np.cos(x)
+plt.subplot(2,1,1)  # 2 rows, 1 column, first plot
+plt.plot(x,y)
+plt.subplot(2,1,2)  # second plot
+plt.plot(x,z)
+
+
+
+x = np.linspace(0, 10, 100)
+plt.plot(x, np.sin(x), label='sin(x)')
+plt.plot(x, np.cos(x), label='cos(x)')
+plt.legend()
+
+
+sizes = [15, 30, 45, 10]
+labels = ['A', 'B', 'C', 'D']
+plt.pie(sizes, labels=labels, autopct='%1.1f%%')
+
+
+plt.scatter([1,2,3,4], [10,20,15,25])
+plt.scatter(np.random.rand(50), np.random.rand(50), c='g', marker='x')
+
+
+
